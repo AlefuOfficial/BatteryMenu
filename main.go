@@ -16,9 +16,9 @@ func BatteryBar() {
 			return
 		}
 		for _, battery := range batteries {
-			fmt.Println(battery.Full)
+			fmt.Println(battery.Current)
 			menuet.App().SetMenuState(&menuet.MenuState{
-				Title: fmt.Sprint(battery.Full),
+				Title: fmt.Sprint(battery.Current),
 			})
 		}
 		time.Sleep(5 * time.Second)
